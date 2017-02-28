@@ -189,6 +189,7 @@ export default {
   },
 
   unbind: function () {
-    this.scrollEventTarget.removeEventListener('scroll', this.scrollListener);
+    if (this && this.scrollEventTarget)
+      this.scrollEventTarget.removeEventListener('scroll', this.scrollListener);
   }
 };
